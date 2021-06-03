@@ -38,10 +38,12 @@ const Todos: React.FunctionComponent = () => {
       <input
         type="text"
         required
+        title="addTodoInput"
         value={todo}
         onChange={(e) => handleSubmit(e)}
       />
       <button
+        title="addButton"
         className="create button"
         onClick={() => (dispatch(addTodo(todo)), setTodo(""))}
       >

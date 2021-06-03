@@ -5,20 +5,18 @@ import { unCompletedTodo } from "../redux/actions";
 
 export interface HomePgaeProps {}
 
-export function getTodos() {
-  return useSelector((state) => {
+export function getTodos() {}
+
+const HomePage: React.FunctionComponent<HomePgaeProps> = () => {
+  const todoList = useSelector((state) => {
     console.log(state);
     //@ts-ignore
 
-    const todos = state?.AddTodoReducer;
+    const todos = state;
     //@ts-ignore
 
     return todos.filter((todo) => todo.isCompleted);
   });
-}
-
-const HomePage: React.FunctionComponent<HomePgaeProps> = () => {
-  const todoList = getTodos();
   const dispatch = useDispatch();
 
   function handleClick(index: any) {

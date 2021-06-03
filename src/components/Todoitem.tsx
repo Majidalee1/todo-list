@@ -25,6 +25,8 @@ const TodoItem: React.FunctionComponent<{
                   color: "white",
                   backgroundColor: "green",
                   borderRadius: "8px",
+                  paddingRight: "20px",
+                  paddingLeft: "20px",
                 }}
                 onClick={(_) => handleClick(index)}
               >

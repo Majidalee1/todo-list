@@ -4,23 +4,19 @@ import TodoItemComponent from "../components/Todoitem";
 import { useState } from "react";
 import AddTodos from "../components/addtodo";
 import { useSelector, useDispatch } from "react-redux";
-import { useParams } from "react-router-dom";
 import { unDeleteTodo } from "../redux/actions";
 
 export interface HomePgaeProps {}
 
-export function getTodos() {
-  return useSelector((state) => {
+const HomePage: React.FunctionComponent<HomePgaeProps> = () => {
+  const todoList = useSelector((state) => {
     console.log(state);
     //@ts-ignore
-    const todos = state?.AddTodoReducer;
+    const todos = state;
     //@ts-ignore
     return todos.filter((todo) => todo.isDeleted);
   });
-}
 
-const HomePage: React.FunctionComponent<HomePgaeProps> = () => {
-  const todoList = getTodos();
   const dispatch = useDispatch();
 
   function handleClick(index: any) {
