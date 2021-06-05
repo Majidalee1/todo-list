@@ -12,7 +12,7 @@ function App() {
         <Navbar />
         <div className="content">
           <Switch>
-            <Route path="/">
+            <Route exact path="todo-list/">
               <HomePage />
             </Route>
             <Route path="/completed">
