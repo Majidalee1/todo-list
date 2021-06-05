@@ -3,9 +3,6 @@ import { saveState, loadState } from "../shared/localStorage";
 import { throttle } from "lodash";
 import { AddTodoReducer } from "./reducers";
 
-const todos = loadState();
-
-//@ts-ignore
 export const store = createStore(AddTodoReducer);
 
 console.log(store);

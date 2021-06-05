@@ -1,8 +1,12 @@
 import { Action } from "@reduxjs/toolkit";
 import { Actions, ITodoItem } from "../interfaces/todo";
 import { completeTodo } from "./actions";
+import { todos } from "./store";
+import { loadState } from "../shared/localStorage";
 
-export const AddTodoReducer = (currentState = [], action: any) => {
+export const AddTodoReducer = (currentState: any, action: any) => {
+  currentState = loadState()?.todos ?? [];
+
   switch (action.type) {
     case Actions.ADD_TODO:
       const payload = action?.payload;
