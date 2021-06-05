@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Route, HashRouter as Router, Switch } from "react-router-dom";
 import Navbar from "./shared/navbar";
 import HomePage from "./pages/Homepage";
 import Completed from "./pages/Completed";
@@ -12,13 +12,13 @@ function App() {
         <Navbar />
         <div className="content">
           <Switch>
-            <Route exact path="todo-list/">
+            <Route exact path="/">
               <HomePage />
             </Route>
-            <Route path="todo-list/completed">
+            <Route path="/completed">
               <Completed />
             </Route>
-            <Route path="todo-list/trash">
+            <Route path="/trash">
               <Trash />
             </Route>
             {/* <Route path="/blogs/:id">
