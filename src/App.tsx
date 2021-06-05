@@ -15,10 +15,10 @@ function App() {
             <Route exact path="/">
               <HomePage />
             </Route>
-            <Route path="/completed">
+            <Route path="#/completed">
               <Completed />
             </Route>
-            <Route path="/trash">
+            <Route path="#/trash">
               <Trash />
             </Route>
             {/* <Route path="/blogs/:id">
