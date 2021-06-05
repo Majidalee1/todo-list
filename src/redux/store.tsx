@@ -1,6 +1,6 @@
 import { createStore } from "@reduxjs/toolkit";
-import { saveState, loadState } from "../shared/localStorage";
 import { throttle } from "lodash";
+import { saveState } from "../shared/localStorage";
 import { AddTodoReducer } from "./reducers";
 
 export const store = createStore(AddTodoReducer);

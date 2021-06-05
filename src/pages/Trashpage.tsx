@@ -1,9 +1,6 @@
 import React from "react";
-
+import { useDispatch, useSelector } from "react-redux";
 import TodoItemComponent from "../components/Todoitem";
-import { useState } from "react";
-import AddTodos from "../components/addtodo";
-import { useSelector, useDispatch } from "react-redux";
 import { unDeleteTodo } from "../redux/actions";
 
 export interface HomePgaeProps {}

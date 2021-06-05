@@ -1,6 +1,4 @@
-import React from "react";
 import { Actions as Action } from "../interfaces/todo";
-import { ITodoItem } from "./../interfaces/todo";
 
 export const addTodo = (todoItem: any) => {
   console.log(todoItem);

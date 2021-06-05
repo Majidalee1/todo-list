@@ -1,7 +1,4 @@
-import { Action } from "@reduxjs/toolkit";
-import { Actions, ITodoItem } from "../interfaces/todo";
-import { completeTodo } from "./actions";
-import { todos } from "./store";
+import { Actions } from "../interfaces/todo";
 import { loadState } from "../shared/localStorage";
 
 export const AddTodoReducer = (currentState: any, action: any) => {
